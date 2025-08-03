@@ -1,0 +1,5 @@
+site_name: Olive's knowledge base
+site_url: https://sourcefoundry.org/cinder/
+nav:
+
+theme: cinder
