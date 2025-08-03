@@ -23,3 +23,16 @@ For full documentation visit [mkdocs.org](https://www.mkdocs.org).
 
 ## 说明 {#explanation}
 <a name="锚点名称">A</a>
+<button type="button" class="btn btn-primary">Primary</button>
+<div class="alert alert-dark" role="alert">
+  A simple dark alert—check it out!
+</div>
+<div class="bs-callout bs-callout-warning">
+  <h4>Warning Callout</h4>
+  This is a warning callout.
+</div>
+<div class="bs-callout bs-callout-info">
+  <h4>Note</h4>
+  Include source code formatted in <a href="https://github.github.com/gfm/#fenced-code-blocks" class="alert-link">Github-flavored Markdown fenced code blocks</a> with an <a href="https://github.github.com/gfm/#info-string" class="alert-link">info string</a> that defines the supported programming language to automate syntax highlighting when your site is built.
+</div>
+<code>mkdocs new [dir-name]</code>
