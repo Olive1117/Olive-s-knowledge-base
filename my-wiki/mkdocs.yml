@@ -1,5 +1,7 @@
 site_name: Olive's knowledge base
 site_url: https://sourcefoundry.org/cinder/
 nav:
+  - 首页: index.md
 
-theme: cinder
+theme:
+  name: cinder
