@@ -2,7 +2,16 @@ site_name: Olive's knowledge base
 
 nav:
   - 首页: index.md
+  - code:
+      - 目录: code.md
+      - esp32c3: code/esp32c3.md
+  - cinder: cinder-specimen.md
+
 
 theme:
   name: null
-  custom_dir: cinder
+  custom_dir: 'cinder'
+
+#theme:
+#  name: cinder
+#  name: mkdocs
