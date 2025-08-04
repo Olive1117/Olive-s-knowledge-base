@@ -8,10 +8,10 @@
     
     
     
-    <link rel="shortcut icon" href="img/favicon.ico">
+    <link rel="shortcut icon" href="../img/favicon.ico">
 
     
-    <title>首页 - Olive's knowledge base</title>
+    <title>目录 - Olive's knowledge base</title>
     
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
@@ -19,9 +19,9 @@
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack.min.css">
     <link href='//rsms.me/inter/inter.css' rel='stylesheet' type='text/css'>
     <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,600,700&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
-    <link href="css/bootstrap-custom.min.css" rel="stylesheet">
-    <link href="css/base.min.css" rel="stylesheet">
-    <link href="css/cinder.min.css" rel="stylesheet">
+    <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
+    <link href="../css/base.min.css" rel="stylesheet">
+    <link href="../css/cinder.min.css" rel="stylesheet">
 
     
         
@@ -40,7 +40,7 @@
      
 </head>
 
-<body class="homepage" >
+<body>
 
     <div class="navbar navbar-default navbar-fixed-top" role="navigation">
     <div class="container">
@@ -59,7 +59,7 @@
             <!-- Main title -->
 
             
-              <a class="navbar-brand" href=".">Olive's knowledge base</a>
+              <a class="navbar-brand" href="..">Olive's knowledge base</a>
             
         </div>
 
@@ -69,25 +69,25 @@
                 <ul class="nav navbar-nav">
                 
                 
-                    <li class="active">
-                        <a href=".">首页</a>
+                    <li >
+                        <a href="..">首页</a>
                     </li>
                 
                 
                 
-                    <li class="dropdown">
+                    <li class="dropdown active">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">code <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                         
                             
-<li >
-    <a href="code/">目录</a>
+<li class="active">
+    <a href="./">目录</a>
 </li>
 
                         
                             
 <li >
-    <a href="code/esp32c3/">esp32c3</a>
+    <a href="esp32c3/">esp32c3</a>
 </li>
 
                         
@@ -97,7 +97,7 @@
                 
                 
                     <li >
-                        <a href="cinder-specimen/">cinder</a>
+                        <a href="../cinder-specimen/">cinder</a>
                     </li>
                 
                 
@@ -109,13 +109,13 @@
                             <i class="fas fa-search"></i> Search
                         </a>
                     </li>
-                    <li class="disabled">
-                        <a rel="prev" >
+                    <li >
+                        <a rel="prev" href="..">
                             <i class="fas fa-arrow-left"></i> Previous
                         </a>
                     </li>
                     <li >
-                        <a rel="next" href="code/">
+                        <a rel="next" href="esp32c3/">
                             Next <i class="fas fa-arrow-right"></i>
                         </a>
                     </li>
@@ -129,21 +129,17 @@
         
         <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="first-level active"><a href="#_1">不知道写什么，先随便记点~</a></li>
-            <li class="second-level"><a href="#_2">因为记笔记软件太难用，所以搞个网页来记</a></li>
+        <li class="first-level active"><a href="#code">code目录</a></li>
+            <li class="second-level"><a href="#_1">嵌入式</a></li>
                 
-            <li class="second-level"><a href="#code">code目录</a></li>
-                
-            <li class="second-level"><a href="#cinder">cinder样例</a></li>
-                
+                <li class="third-level"><a href="#esp32c3">esp32c3</a></li>
     </ul>
 </div></div>
         <div class="col-md-9" role="main">
 
-<h1 id="_1">不知道写什么，先随便记点~</h1>
-<h3 id="_2">因为记笔记软件太难用，所以搞个网页来记</h3>
-<h3 id="code"><a href="/code">code目录</a></h3>
-<h3 id="cinder"><a href="/cinder">cinder样例</a></h3></div>
+<h1 id="code">code目录</h1>
+<h2 id="_1">嵌入式</h2>
+<h3 id="esp32c3"><a href="esp32c3">esp32c3</a></h3></div>
         
         
     </div>
@@ -163,7 +159,7 @@
       </footer>
     
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="js/bootstrap-3.0.3.min.js"></script>
+    <script src="../js/bootstrap-3.0.3.min.js"></script>
 
     
     <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/highlight.min.js"></script>
@@ -171,10 +167,10 @@
     <script>hljs.initHighlightingOnLoad();</script>
     
 
-    <script>var base_url = "."</script>
+    <script>var base_url = ".."</script>
     
-    <script src="js/base.js"></script>
-    <script src="search/main.js"></script>
+    <script src="../js/base.js"></script>
+    <script src="../search/main.js"></script>
 
     <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
@@ -245,8 +241,3 @@
     </body>
 
 </html>
-
-<!--
-MkDocs version : 1.6.1
-Build Date UTC : 2025-08-04 16:42:12.121133+00:00
--->
