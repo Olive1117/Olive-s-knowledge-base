@@ -2,16 +2,26 @@ site_name: Olive's knowledge base
 
 nav:
   - 首页: index.md
-  - code:
-      - 目录: code.md
-      - esp32c3: code/esp32c3.md
-  - cinder: cinder-specimen.md
+  - 导航: navigation.md
+  - 笔记:
+      - 笔记目录: notes/note-index.md
+      - cinder:
+          - 旧样式-页面直接粘贴: cinder-specimen.md
+          - 标准样式: cinder-specimen-new.md
+      - code:
+          - notes/code/git.md
+          - notes/code/matlab.md
+          - notes/code/esp32c3.md
 
 
 theme:
   name: null
   custom_dir: 'cinder'
-
+#  当网页的搜索and多层页面功能都不能用时，要把下面这两行取消注释，再注释掉，可能是mkdocs默认配置卡了，烧香...
+#  plugins:
+#    - search
+markdown_extensions:
+  - admonition
 #theme:
 #  name: cinder
 #  name: mkdocs
