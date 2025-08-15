@@ -143,6 +143,21 @@
                     </li>
                 
                 
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">日常 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../../%E8%AE%B0%E5%8D%95%E8%AF%8D/20250813/">背单词</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
                 </ul>
 
             <ul class="nav navbar-nav navbar-right">
@@ -175,6 +190,7 @@
             <li class="second-level"><a href="#_1">一些定义</a></li>
                 
                 <li class="third-level"><a href="#_2">函数</a></li>
+                <li class="third-level"><a href="#or">数组变量or矩阵</a></li>
     </ul>
 </div></div>
         <div class="col-md-9" role="main">
@@ -183,11 +199,99 @@
 <h2 id="_1">一些定义</h2>
 <h3 id="_2">函数</h3>
 <ul>
-<li><code>abs</code>- 取绝对值and取复数的模长</li>
-<li><code>floor</code>- 下取整</li>
-<li><code>fix</code>- 舍弃小数位</li>
-<li><code>ceil</code>- 上取整</li>
-</ul></div>
+<li>简单计算</li>
+<li><code>abs(x)</code>- 取绝对值and取复数的模长</li>
+<li><code>floor(x)</code>- 下取整</li>
+<li><code>fix(x)</code>- 舍弃小数位</li>
+<li><code>ceil(x)</code>- 上取整</li>
+<li><code>round(x, [n])</code>- 四舍五入</li>
+<li>
+<ul>
+<li>可选参数n - 保留n位小数四舍五入，n&lt;0则舍入到小数点左侧第n位数</li>
+</ul>
+</li>
+<li><code>mod(x, m)</code>- 对x求m的模</li>
+<li><code>sqrt(x)</code>- 开方，<code>format long g</code>可以把计算结果显示为长格式</li>
+<li><code>exp(x)</code>- 以e为底的x指数，例：e^2</li>
+<li><code>log(x)/log2(x)/log10(x)</code>- 以e、2、10为底的对数</li>
+</ul>
+<hr />
+<ul>
+<li>数组</li>
+<li><code>linspace(a, b, [n])</code>- 创建第一个为a最后一个为b的等差数列数组</li>
+<li><code>logspace(a, b, [n])</code>- 创建第一个为10^a最后一个为10^b的等比数列数组</li>
+<li>
+<ul>
+<li>可选参数n - 指定数组元素个数，默认100</li>
+</ul>
+</li>
+<li><code>length(x)</code>- 返回行和列中的较大值</li>
+<li><code>numel(x)</code>- 返回矩阵中元素的总数</li>
+</ul>
+<hr />
+<ul>
+<li>矩阵</li>
+<li><code>zeros(n), zeros(n, m)</code>- 创建n行n列的0矩阵，创建n行m列的0矩阵</li>
+<li><code>ones(n, [m])</code>- 创建n行n列或n行m列的全为1的矩阵</li>
+<li><code>eye(n, [m])</code>- 创建n行n列或n行m列的单位矩阵</li>
+<li><code>rand(n, [m])</code>- 创建n行n列或n行m列的随机数矩阵，随机数取值范围0~1</li>
+<li><code>randi([imin, imax], n, m)</code>- 创建n行n列或n行m列的随机数矩阵，随机数取值范围imin~imax</li>
+<li>
+<ul>
+<li>imin为1可省略，例：randi(imax, n, m)</li>
+</ul>
+</li>
+<li>
+<ul>
+<li>m可省略，即创建n行方阵</li>
+</ul>
+</li>
+<li><code>randn(n, [m])</code>- 创建n行n列或n行m列的标准正态分布矩阵</li>
+<li><code>diag(V, k), V = [a1, a2, ...]</code>- 创建主对角线为向量V的对角矩阵，k表示沿截距偏移值</li>
+<li><code>diag(A, k), A = 矩阵</code>- 返回A矩阵的主对角线值构成的列向量，k表示沿截距偏移值</li>
+<li><code>blkdiag(A1, A2, A3, ...)</code>- 创建分块对角矩阵, 以A1, A2, A3...矩阵块为主对角线元素</li>
+<li><code>size(A, [dim])</code>- 返回一个含两个元素的行向量，代表矩阵的行数和列数</li>
+<li>
+<ul>
+<li>可选参数dim - 返回在维度dim上的长度，dim=1表示行， =2表示列</li>
+</ul>
+</li>
+<li><code>sub2ind(sz, row, col)/ind2sub(sz, ind), sz = [row, col]</code>- 将矩阵的sub原始索引（双下标）和ind线性索引之间进行转换</li>
+<li><code>cat(dim, A, B, ...)/horzcat(A, B, ...)/vertcat(A, B, ..)</code>- 对AB...矩阵进行横向拼接horzcat dim=2或纵向拼接vartcat dim=1</li>
+<li>
+<ul>
+<li>可以用[A B]或[A, B]代替horzcat，[A'回车'B]或[A; B]代替vertcat</li>
+</ul>
+</li>
+<li><code>repmat(A, n, m)</code>- 让A矩阵在行上重复n次，列上重复m 次</li>
+<li><code>repelem(A, n, m)</code>- 让A中的元素沿行重复n次，沿列重复m次，nm可以为数列，表示沿行方向第几行重复n次，或者沿列方向第几列重复m次</li>
+<li><code>reshape(A, n, m)</code>- 让A矩阵按线性索引重新排列成n行m列</li>
+<li><code>sort(A, ['descend'])</code>- 排序，descend降序</li>
+</ul>
+<h3 id="or">数组变量or矩阵</h3>
+<p>创建一个矩阵</p>
+<pre><code>a = [1 2 3; 4 5 6; 7 8 9]
+a = [1, 2, 3; 4, 5, 6; 7, 8, 9]
+&gt; 1 2 3
+&gt; 4 5 6
+&gt; 7 8 9
+</code></pre>
+<p>创建一个一维数组，或者说向量</p>
+<pre><code># n: x: m
+# n和m代表最大值最小值(闭区间)， x表示步长
+a = 1: 2: 7
+&gt; 1 3 5 7
+# x也可以省略，打印一个升序数组
+b = 2: 5
+&gt; 2 3 4 5
+# 在向量或矩阵里可以只保留“:”， 表示全部，相当于1：end的简写
+&gt; A(1, :)
+&gt; # 会打印第一行全部元素
+&gt; A(:)
+&gt; # 会将矩阵按线性索引重构成列向量（矩阵是按列线性储存的）
+&gt; A(1: end)
+&gt; # 会将矩阵按线性索引重构成行向量
+</code></pre></div>
         
         
     </div>
