@@ -8,10 +8,10 @@
     
     
     
-    <link rel="shortcut icon" href="img/favicon.ico">
+    <link rel="shortcut icon" href="../../../img/favicon.ico">
 
     
-    <title>首页 - Olive's knowledge base</title>
+    <title>Web - Olive's knowledge base</title>
     
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
@@ -19,9 +19,9 @@
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack.min.css">
     <link href='//rsms.me/inter/inter.css' rel='stylesheet' type='text/css'>
     <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,600,700&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
-    <link href="css/bootstrap-custom.min.css" rel="stylesheet">
-    <link href="css/base.min.css" rel="stylesheet">
-    <link href="css/cinder.min.css" rel="stylesheet">
+    <link href="../../../css/bootstrap-custom.min.css" rel="stylesheet">
+    <link href="../../../css/base.min.css" rel="stylesheet">
+    <link href="../../../css/cinder.min.css" rel="stylesheet">
 
     
         
@@ -40,7 +40,7 @@
      
 </head>
 
-<body class="homepage" >
+<body>
 
     <div class="navbar navbar-default navbar-fixed-top" role="navigation">
     <div class="container">
@@ -59,7 +59,7 @@
             <!-- Main title -->
 
             
-              <a class="navbar-brand" href=".">Olive's knowledge base</a>
+              <a class="navbar-brand" href="../../..">Olive's knowledge base</a>
             
         </div>
 
@@ -69,14 +69,14 @@
                 <ul class="nav navbar-nav">
                 
                 
-                    <li class="active">
-                        <a href=".">首页</a>
+                    <li >
+                        <a href="../../..">首页</a>
                     </li>
                 
                 
                 
                     <li >
-                        <a href="navigation/">导航</a>
+                        <a href="../../../navigation/">导航</a>
                     </li>
                 
                 
@@ -87,7 +87,7 @@
                         
                             
 <li >
-    <a href="notes/note-index/">笔记目录</a>
+    <a href="../../note-index/">笔记目录</a>
 </li>
 
                         
@@ -98,13 +98,13 @@
         
             
 <li >
-    <a href="cinder-specimen/">旧样式-页面直接粘贴</a>
+    <a href="../../../cinder-specimen/">旧样式-页面直接粘贴</a>
 </li>
 
         
             
 <li >
-    <a href="cinder-specimen-new/">标准样式</a>
+    <a href="../../../cinder-specimen-new/">标准样式</a>
 </li>
 
         
@@ -119,19 +119,19 @@
         
             
 <li >
-    <a href="notes/code/git/">git相关</a>
+    <a href="../git/">git相关</a>
 </li>
 
         
             
 <li >
-    <a href="notes/code/matlab/">matlab</a>
+    <a href="../matlab/">matlab</a>
 </li>
 
         
             
 <li >
-    <a href="notes/code/esp32c3/">Esp32c3</a>
+    <a href="../esp32c3/">Esp32c3</a>
 </li>
 
         
@@ -150,7 +150,7 @@
                         
                             
 <li >
-    <a href="%E8%AE%B0%E5%8D%95%E8%AF%8D/20250813/">背单词</a>
+    <a href="../../../%E8%AE%B0%E5%8D%95%E8%AF%8D/20250813/">背单词</a>
 </li>
 
                         
@@ -166,16 +166,6 @@
                             <i class="fas fa-search"></i> Search
                         </a>
                     </li>
-                    <li class="disabled">
-                        <a rel="prev" >
-                            <i class="fas fa-arrow-left"></i> Previous
-                        </a>
-                    </li>
-                    <li >
-                        <a rel="next" href="navigation/">
-                            Next <i class="fas fa-arrow-right"></i>
-                        </a>
-                    </li>
             </ul>
         </div>
     </div>
@@ -186,23 +176,17 @@
         
         <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="first-level active"><a href="#_1">不知道写什么，先随便记点~</a></li>
-            <li class="second-level"><a href="#_2">因为记笔记软件太难用，所以搞个网页来记</a></li>
-                
-                <li class="third-level"><a href="#mkdocs-gh-deploy">更新网页命令 mkdocs gh-deploy</a></li>
     </ul>
 </div></div>
         <div class="col-md-9" role="main">
 
-<h1 id="_1">不知道写什么，先随便记点~</h1>
-<h2 id="_2">因为记笔记软件太难用，所以搞个网页来记</h2>
-<p><a href="cinder-specimen">cinder样例-旧</a><br />
-<a href="cinder-specimen-new">cinder样例</a></p>
-<h3 id="mkdocs-gh-deploy">更新网页命令 <code>mkdocs gh-deploy</code></h3>
-<p><a href="https://twikoo.js.org/">Twikoo</a>网站评论系统<br />
-<a href="https://vitepress.vite.ac.cn/">VitePress</a>基于 Vite 和 Vue 的静态网站生成器<br />
-<a href="https://processing.org/">Processing</a>基于java的编码化画画语言<br />
-<a href="https://vercel.com/">Vercel</a>简单快速部署网站工具</p></div>
+<p>localStorage 是一种 Web 存储机制，
+允许网站在用户的浏览器中存储数据，即使浏览器关闭后数据仍然保留。<br />
+<code>localStorage.setItem('hideDevSitePopup', 'true');</code>
+这行代码的作用是将键 'hideDevSitePopup' 和值 'true' 存储到
+浏览器的 localStorage 中。这样，即使用户关闭了浏览器，再次访问网站时，
+这个键值对仍然存在。<br />
+- 关联：<code>localStorage.getItem(hideDevSitePopup)</code>获取已保存键的值</p></div>
         
         
     </div>
@@ -222,7 +206,7 @@
       </footer>
     
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="js/bootstrap-3.0.3.min.js"></script>
+    <script src="../../../js/bootstrap-3.0.3.min.js"></script>
 
     
     <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/highlight.min.js"></script>
@@ -230,10 +214,10 @@
     <script>hljs.initHighlightingOnLoad();</script>
     
 
-    <script>var base_url = "."</script>
+    <script>var base_url = "../../.."</script>
     
-    <script src="js/base.js"></script>
-    <script src="search/main.js"></script>
+    <script src="../../../js/base.js"></script>
+    <script src="../../../search/main.js"></script>
 
     <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
@@ -304,8 +288,3 @@
     </body>
 
 </html>
-
-<!--
-MkDocs version : 1.6.1
-Build Date UTC : 2025-08-30 11:36:15.406311+00:00
--->
