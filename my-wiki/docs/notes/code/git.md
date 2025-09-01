@@ -1,5 +1,7 @@
 # git相关
 
+[如何给别人项目提pr](https://zhuanlan.zhihu.com/p/584834288)
+
 ## cmd命令
 
 ---
@@ -7,83 +9,83 @@
 ### 命令速查
 初始化和配置
 ```
-git init：初始化一个新的 Git 仓库。
-git config --global user.name "Your Name"：设置全局用户名。
-git config --global user.email "your.email@example.com"：设置全局用户邮箱。
+git init    # 初始化一个新的 Git 仓库。
+git config --global user.name "Your Name"   # 设置全局用户名。
+git config --global user.email "your.email@example.com" # 设置全局用户邮箱。
 ```
 工作区和暂存区操作
 ```
-git status：查看工作区状态，包括已跟踪和未跟踪的文件。
-git add <file>：将文件添加到暂存区。
-git add .：将所有更改（包括新文件、修改过的文件、删除的文件）添加到暂存区。
-git rm <file>：删除工作区中的文件，并从暂存区移除。
-git mv <old-file> <new-file>：移动或重命名文件，并更新暂存区。
+git status      # 查看工作区状态，包括已跟踪和未跟踪的文件。
+git add <file>  # 将文件添加到暂存区。
+git add .       # 将所有更改（包括新文件、修改过的文件、删除的文件）添加到暂存区。
+git rm <file>   # 删除工作区中的文件，并从暂存区移除。
+git mv <old-file> <new-file>    # 移动或重命名文件，并更新暂存区。
 ```
 创建新分支
 ```
-git branch <branch-name>        #创建一个新分支，但不切换到该分支。
-git checkout -b <branch-name>   #创建一个新分支，并立即切换到该分支。
+git branch <branch-name>        # 创建一个新分支，但不切换到该分支。
+git checkout -b <branch-name>   # 创建一个新分支，并立即切换到该分支。
 ```
 查看分支
 ```
 git branch      # 查看分支
 git branch -r   # 列出所有远程分支。
-git branch -a   #列出所有本地和远程分支
+git branch -a   # 列出所有本地和远程分支
 ```
 删除分支
 ```
-git branch -d <branch-name>：删除一个已经完全合并到当前分支的本地分支。
-git branch -D <branch-name>：强制删除一个本地分支，不管它是否已经合并。
+git branch -d <branch-name> # 删除一个已经完全合并到当前分支的本地分支。
+git branch -D <branch-name> # 强制删除一个本地分支，不管它是否已经合并。
 ```
 设置跟踪关系
 ```
 git branch -u <remote>/<branch>
-或 git branch --set-upstream-to <remote>/<branch>：为当前分支设置上游（跟踪）分支。
-git branch --set-upstream <branch> <remote>/<branch>：为指定的本地分支设置上游分支。
+或 git branch --set-upstream-to <remote>/<branch>        # 为当前分支设置上游（跟踪）分支。
+git branch --set-upstream <branch> <remote>/<branch>    # 为指定的本地分支设置上游分支。
 ```
 重命名分支
 ```
-git branch -m <old-branch-name> <new-branch-name>：重命名当前分支。
-git branch -m <old-branch-name> <new-branch-name>：重命名指定的本地分支。
+git branch -m <old-branch-name> <new-branch-name>   # 重命名当前分支。
+git branch -m <old-branch-name> <new-branch-name>   # 重命名指定的本地分支。
 ```
 合并分支
 ```
-git merge <branch-name>：将指定的分支合并到当前分支。
+git merge <branch-name> # 将指定的分支合并到当前分支。
 ```
 提交更改
 ```
-git commit -m "Commit message"：提交暂存区的更改。
-git commit -a：提交所有已跟踪文件的更改（跳过暂存区）。
-git commit --amend：修改上一次提交（例如，修改提交信息）。
+git commit -m "Commit message"  # 提交暂存区的更改。
+git commit -a                   # 提交所有已跟踪文件的更改（跳过暂存区）。
+git commit --amend              # 修改上一次提交（例如，修改提交信息）。
 ```
 远程仓库操作
 ```
-git remote add origin <remote-repo-url>：添加远程仓库。
-git remote -v：查看远程仓库的 URL。
-git fetch <remote>：从远程仓库获取最新的更改。
-git pull <remote> <branch>：从远程分支拉取更改并合并到当前分支。
-git push <remote> <branch>：将本地分支推送到远程仓库。
-git push <remote> --delete <branch>：从远程仓库删除一个分支。
+git remote add origin <remote-repo-url> # 添加远程仓库。
+git remote -v                           # 查看远程仓库的 URL。
+git fetch <remote>                      # 从远程仓库获取最新的更改。
+git pull <remote> <branch>              # 从远程分支拉取更改并合并到当前分支。
+git push <remote> <branch>              # 将本地分支推送到远程仓库。
+git push <remote> --delete <branch>     # 从远程仓库删除一个分支。
 ```
 查看历史和日志
 ```
-git log：查看提交历史。
-git log --oneline：以简洁格式查看提交历史。
-git log <commit>：查看特定提交的详细信息。
-git blame <file>：查看文件中每一行的最后修改者。
+git log             # 查看提交历史。
+git log --oneline   # 以简洁格式查看提交历史。
+git log <commit>    # 查看特定提交的详细信息。
+git blame <file>    # 查看文件中每一行的最后修改者。
 ```
 撤销操作
 ```
-git reset <file>：将文件从暂存区移除。
-git checkout -- <file>：将文件恢复到上一次提交的状态。
-git revert <commit>：创建一个新的提交，撤销指定提交的更改。
-git reset --hard：将工作区和暂存区都恢复到上一次提交的状态（危险操作，会丢失未提交的更改）。
+git reset <file>        # 将文件从暂存区移除。
+git checkout -- <file>  # 将文件恢复到上一次提交的状态。
+git revert <commit>     # 创建一个新的提交，撤销指定提交的更改。
+git reset --hard        # 将工作区和暂存区都恢复到上一次提交的状态（危险操作，会丢失未提交的更改）。
 ```
 标签管理
 ```
-git tag <tag-name>：创建一个轻量级标签。
-git tag -a <tag-name> -m "Tag message"：创建一个带注释的标签。
-git push <remote> <tag-name>：将标签推送到远程仓库。
+git tag <tag-name>                      # 创建一个轻量级标签。
+git tag -a <tag-name> -m "Tag message"  # 创建一个带注释的标签。
+git push <remote> <tag-name>            # 将标签推送到远程仓库。
 ```
 
 ---
