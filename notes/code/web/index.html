@@ -186,7 +186,16 @@
 这行代码的作用是将键 'hideDevSitePopup' 和值 'true' 存储到
 浏览器的 localStorage 中。这样，即使用户关闭了浏览器，再次访问网站时，
 这个键值对仍然存在。<br />
-- 关联：<code>localStorage.getItem(hideDevSitePopup)</code>获取已保存键的值</p></div>
+- 关联：<code>localStorage.getItem(hideDevSitePopup)</code>获取已保存键的值</p>
+<hr />
+<p><a href="https://learn.microsoft.com/zh-cn/microsoft-edge/devtools/remote-debugging/windows#install-and-configure-microsoft-edge">关于edge开启远程调试</a> 
+<a href="https://blog.csdn.net/tjb132/article/details/136655986">csdn教程</a><br />
+edge输入edge://flags<br />
+找到<code>Enable remote debugging through Windows Device Portal</code>将该标志设置为 <code>Enabled</code></p>
+<p>在完全关闭浏览器情况下，命令行输入<code>msedge.exe --remote-debugging-port=9222</code><br />
+然后访问 <code>http://127.0.0.1:9222/json</code> 如果看到一个包含当前打开的标签页信息的 JSON 列表，说明远程调试已成功启用。<br />
+- 可以在“目标”字段中，添加 --remote-debugging-port=9222 参数。例如：
+<code>"C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe" --remote-debugging-port=9222</code></p></div>
         
         
     </div>

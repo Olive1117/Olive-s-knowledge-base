@@ -189,18 +189,88 @@
         <li class="first-level active"><a href="#git">git相关</a></li>
             <li class="second-level"><a href="#cmd">cmd命令</a></li>
                 
-                <li class="third-level"><a href="#git_1">创建本地git仓库</a></li>
-                <li class="third-level"><a href="#git_2">添加文件到git暂存区</a></li>
-                <li class="third-level"><a href="#_1">将暂存区的更改提交到本地仓库，并添加提交信息：</a></li>
-                <li class="third-level"><a href="#_2">拉取</a></li>
-                <li class="third-level"><a href="#_3">推送</a></li>
+                <li class="third-level"><a href="#_1">命令速查</a></li>
+                <li class="third-level"><a href="#_2">个人笔记</a></li>
+                <li class="third-level"><a href="#_7">关于提交撤回一般不撤回</a></li>
     </ul>
 </div></div>
         <div class="col-md-9" role="main">
 
 <h1 id="git">git相关</h1>
+<p><a href="https://zhuanlan.zhihu.com/p/584834288">如何给别人项目提pr</a></p>
 <h2 id="cmd">cmd命令</h2>
-<h3 id="git_1"><strong>创建本地git仓库</strong></h3>
+<hr />
+<h3 id="_1">命令速查</h3>
+<p>初始化和配置</p>
+<pre><code>git init    # 初始化一个新的 Git 仓库。
+git config --global user.name &quot;Your Name&quot;   # 设置全局用户名。
+git config --global user.email &quot;your.email@example.com&quot; # 设置全局用户邮箱。
+</code></pre>
+<p>工作区和暂存区操作</p>
+<pre><code>git status      # 查看工作区状态，包括已跟踪和未跟踪的文件。
+git add &lt;file&gt;  # 将文件添加到暂存区。
+git add .       # 将所有更改（包括新文件、修改过的文件、删除的文件）添加到暂存区。
+git rm &lt;file&gt;   # 删除工作区中的文件，并从暂存区移除。
+git mv &lt;old-file&gt; &lt;new-file&gt;    # 移动或重命名文件，并更新暂存区。
+</code></pre>
+<p>创建新分支</p>
+<pre><code>git branch &lt;branch-name&gt;        # 创建一个新分支，但不切换到该分支。
+git checkout -b &lt;branch-name&gt;   # 创建一个新分支，并立即切换到该分支。
+</code></pre>
+<p>查看分支</p>
+<pre><code>git branch      # 查看分支
+git branch -r   # 列出所有远程分支。
+git branch -a   # 列出所有本地和远程分支
+</code></pre>
+<p>删除分支</p>
+<pre><code>git branch -d &lt;branch-name&gt; # 删除一个已经完全合并到当前分支的本地分支。
+git branch -D &lt;branch-name&gt; # 强制删除一个本地分支，不管它是否已经合并。
+</code></pre>
+<p>设置跟踪关系</p>
+<pre><code>git branch -u &lt;remote&gt;/&lt;branch&gt;
+或 git branch --set-upstream-to &lt;remote&gt;/&lt;branch&gt;        # 为当前分支设置上游（跟踪）分支。
+git branch --set-upstream &lt;branch&gt; &lt;remote&gt;/&lt;branch&gt;    # 为指定的本地分支设置上游分支。
+</code></pre>
+<p>重命名分支</p>
+<pre><code>git branch -m &lt;old-branch-name&gt; &lt;new-branch-name&gt;   # 重命名当前分支。
+git branch -m &lt;old-branch-name&gt; &lt;new-branch-name&gt;   # 重命名指定的本地分支。
+</code></pre>
+<p>合并分支</p>
+<pre><code>git merge &lt;branch-name&gt; # 将指定的分支合并到当前分支。
+</code></pre>
+<p>提交更改</p>
+<pre><code>git commit -m &quot;Commit message&quot;  # 提交暂存区的更改。
+git commit -a                   # 提交所有已跟踪文件的更改（跳过暂存区）。
+git commit --amend              # 修改上一次提交（例如，修改提交信息）。
+</code></pre>
+<p>远程仓库操作</p>
+<pre><code>git remote add origin &lt;remote-repo-url&gt; # 添加远程仓库。
+git remote -v                           # 查看远程仓库的 URL。
+git fetch &lt;remote&gt;                      # 从远程仓库获取最新的更改。
+git pull &lt;remote&gt; &lt;branch&gt;              # 从远程分支拉取更改并合并到当前分支。
+git push &lt;remote&gt; &lt;branch&gt;              # 将本地分支推送到远程仓库。
+git push &lt;remote&gt; --delete &lt;branch&gt;     # 从远程仓库删除一个分支。
+</code></pre>
+<p>查看历史和日志</p>
+<pre><code>git log             # 查看提交历史。
+git log --oneline   # 以简洁格式查看提交历史。
+git log &lt;commit&gt;    # 查看特定提交的详细信息。
+git blame &lt;file&gt;    # 查看文件中每一行的最后修改者。
+</code></pre>
+<p>撤销操作</p>
+<pre><code>git reset &lt;file&gt;        # 将文件从暂存区移除。
+git checkout -- &lt;file&gt;  # 将文件恢复到上一次提交的状态。
+git revert &lt;commit&gt;     # 创建一个新的提交，撤销指定提交的更改。
+git reset --hard        # 将工作区和暂存区都恢复到上一次提交的状态（危险操作，会丢失未提交的更改）。
+</code></pre>
+<p>标签管理</p>
+<pre><code>git tag &lt;tag-name&gt;                      # 创建一个轻量级标签。
+git tag -a &lt;tag-name&gt; -m &quot;Tag message&quot;  # 创建一个带注释的标签。
+git push &lt;remote&gt; &lt;tag-name&gt;            # 将标签推送到远程仓库。
+</code></pre>
+<hr />
+<h3 id="_2">个人笔记</h3>
+<h4 id="git_1"><strong>创建本地git仓库</strong></h4>
 <pre><code>git init
 # 也可以指定仓库目录
 git init newrepo
@@ -209,12 +279,12 @@ git init newrepo
 或者克隆一个仓库</p>
 <pre><code>git clone
 </code></pre>
-<h3 id="git_2"><strong>添加文件到git暂存区</strong></h3>
+<h4 id="git_2"><strong>添加文件到git暂存区</strong></h4>
 <pre><code>git add filename
 # 或者添加所有修改的文件
 git add .
 </code></pre>
-<h3 id="_1"><strong>将暂存区的更改提交到本地仓库，并添加提交信息：</strong></h3>
+<h4 id="_3"><strong>将暂存区的更改提交到本地仓库，并添加提交信息：</strong></h4>
 <pre><code>git commit -m &quot;Add new feature&quot;
 </code></pre>
 <p>常见提交类型</p>
@@ -232,17 +302,37 @@ git add .
 <li><code>ci</code> 持续集成配置的变更</li>
 <li><code>revert</code>- 回滚</li>
 </ul>
-<h3 id="_2"><strong>拉取</strong></h3>
+<h4 id="_4"><strong>拉取</strong></h4>
 <pre><code>git pull origin main
 # 或者如果在新的分支上工作
 git pull origin new-feature
 </code></pre>
-<h3 id="_3"><strong>推送</strong></h3>
+<h4 id="_5"><strong>推送</strong></h4>
 <pre><code>git push origin new-feature
 </code></pre>
 <div class="alert alert-warning" role="alert">
   先拉取(pull)再推送(push)!
-</div></div>
+</div>
+
+<h4 id="_6"><strong>分支操作</strong></h4>
+<hr />
+<h3 id="_7">关于提交撤回<code>一般不撤回</code></h3>
+<p>如果已经push</p>
+<pre><code>git checkout -b feature/my-fix  # 基于当前分支的代码创建新分支
+git checkout main               # 回到已经提交的main分支
+git fetch upstream              # 将上游仓库的所有分支、提交全部拉到本地，但不合并，也不改任何本地分支。
+git reset --hard upstream/main  # 本地 main 回退
+git push -f origin main         # 强制推，覆盖远程 main
+</code></pre>
+<p>如果还未push</p>
+<pre><code>git checkout -b feature/my-fix   # 创建并切换
+# 改动已自动带过来
+git push -u origin feature/my-fix   # push新分支
+git checkout main                   # 回到main分支
+git fetch upstream                  # 同上
+git reset --hard upstream/main      # 本地彻底回退
+git push -f origin main             # 强制同步回你的 fork
+</code></pre></div>
         
         
     </div>
