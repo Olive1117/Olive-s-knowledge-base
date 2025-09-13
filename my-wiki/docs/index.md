@@ -14,7 +14,8 @@
 - [Vercel](https://vercel.com/)简单快速部署网站工具
 
 其余技术栈
-- gsap
-- lenis
-- lottie
-- motion-vue
+
+- gsap  
+- lenis  
+- lottie  
+- motion-vue  
