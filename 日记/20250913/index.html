@@ -8,10 +8,10 @@
     
     
     
-    <link rel="shortcut icon" href="../../../img/favicon.ico">
+    <link rel="shortcut icon" href="../../img/favicon.ico">
 
     
-    <title>Web - Olive's knowledge base</title>
+    <title>20250913 - Olive's knowledge base</title>
     
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
@@ -19,9 +19,9 @@
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack.min.css">
     <link href='//rsms.me/inter/inter.css' rel='stylesheet' type='text/css'>
     <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,600,700&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
-    <link href="../../../css/bootstrap-custom.min.css" rel="stylesheet">
-    <link href="../../../css/base.min.css" rel="stylesheet">
-    <link href="../../../css/cinder.min.css" rel="stylesheet">
+    <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+    <link href="../../css/base.min.css" rel="stylesheet">
+    <link href="../../css/cinder.min.css" rel="stylesheet">
 
     
         
@@ -59,7 +59,7 @@
             <!-- Main title -->
 
             
-              <a class="navbar-brand" href="../../..">Olive's knowledge base</a>
+              <a class="navbar-brand" href="../..">Olive's knowledge base</a>
             
         </div>
 
@@ -70,13 +70,13 @@
                 
                 
                     <li >
-                        <a href="../../..">首页</a>
+                        <a href="../..">首页</a>
                     </li>
                 
                 
                 
                     <li >
-                        <a href="../../../navigation/">导航</a>
+                        <a href="../../navigation/">导航</a>
                     </li>
                 
                 
@@ -87,7 +87,7 @@
                         
                             
 <li >
-    <a href="../../note-index/">笔记目录</a>
+    <a href="../../notes/note-index/">笔记目录</a>
 </li>
 
                         
@@ -98,13 +98,13 @@
         
             
 <li >
-    <a href="../../../cinder-specimen/">旧样式-页面直接粘贴</a>
+    <a href="../../cinder-specimen/">旧样式-页面直接粘贴</a>
 </li>
 
         
             
 <li >
-    <a href="../../../cinder-specimen-new/">标准样式</a>
+    <a href="../../cinder-specimen-new/">标准样式</a>
 </li>
 
         
@@ -119,19 +119,19 @@
         
             
 <li >
-    <a href="../git/">git相关</a>
+    <a href="../../notes/code/git/">git相关</a>
 </li>
 
         
             
 <li >
-    <a href="../matlab/">matlab</a>
+    <a href="../../notes/code/matlab/">matlab</a>
 </li>
 
         
             
 <li >
-    <a href="../esp32c3/">Esp32c3</a>
+    <a href="../../notes/code/esp32c3/">Esp32c3</a>
 </li>
 
         
@@ -144,7 +144,7 @@
                 
                 
                 
-                    <li class="dropdown">
+                    <li class="dropdown active">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">日常 <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                         
@@ -155,19 +155,19 @@
         
             
 <li >
-    <a href="../../../%E8%AE%B0%E5%8D%95%E8%AF%8D/20250813/">单词</a>
+    <a href="../../%E8%AE%B0%E5%8D%95%E8%AF%8D/20250813/">单词</a>
 </li>
 
         
             
 <li >
-    <a href="../../../%E8%AE%B0%E5%8D%95%E8%AF%8D/20250817/">单词</a>
+    <a href="../../%E8%AE%B0%E5%8D%95%E8%AF%8D/20250817/">单词</a>
 </li>
 
         
             
 <li >
-    <a href="../../../%E8%AE%B0%E5%8D%95%E8%AF%8D/20250913/">单词</a>
+    <a href="../../%E8%AE%B0%E5%8D%95%E8%AF%8D/20250913/">单词</a>
 </li>
 
         
@@ -181,8 +181,8 @@
     <ul class="dropdown-menu">
         
             
-<li >
-    <a href="../../../%E6%97%A5%E8%AE%B0/20250913/">20250913</a>
+<li class="active">
+    <a href="./">20250913</a>
 </li>
 
         
@@ -202,6 +202,16 @@
                             <i class="fas fa-search"></i> Search
                         </a>
                     </li>
+                    <li >
+                        <a rel="prev" href="../../%E8%AE%B0%E5%8D%95%E8%AF%8D/20250913/">
+                            <i class="fas fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li class="disabled">
+                        <a rel="next" >
+                            Next <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </li>
             </ul>
         </div>
     </div>
@@ -216,22 +226,12 @@
 </div></div>
         <div class="col-md-9" role="main">
 
-<p>localStorage 是一种 Web 存储机制，
-允许网站在用户的浏览器中存储数据，即使浏览器关闭后数据仍然保留。<br />
-<code>localStorage.setItem('hideDevSitePopup', 'true');</code>
-这行代码的作用是将键 'hideDevSitePopup' 和值 'true' 存储到
-浏览器的 localStorage 中。这样，即使用户关闭了浏览器，再次访问网站时，
-这个键值对仍然存在。<br />
-- 关联：<code>localStorage.getItem(hideDevSitePopup)</code>获取已保存键的值</p>
-<hr />
-<p><a href="https://learn.microsoft.com/zh-cn/microsoft-edge/devtools/remote-debugging/windows#install-and-configure-microsoft-edge">关于edge开启远程调试</a> 
-<a href="https://blog.csdn.net/tjb132/article/details/136655986">csdn教程</a><br />
-edge输入edge://flags<br />
-找到<code>Enable remote debugging through Windows Device Portal</code>将该标志设置为 <code>Enabled</code></p>
-<p>在完全关闭浏览器情况下，命令行输入<code>msedge.exe --remote-debugging-port=9222</code><br />
-然后访问 <code>http://127.0.0.1:9222/json</code> 如果看到一个包含当前打开的标签页信息的 JSON 列表，说明远程调试已成功启用。<br />
-- 可以在“目标”字段中，添加 --remote-debugging-port=9222 参数。例如：
-<code>"C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe" --remote-debugging-port=9222</code></p></div>
+<p>九月四五六七号忙着数模比赛，三天三夜完全没休息过，十小时睡眠和两顿饭，感觉自己好厉害，这样居然没死（x<br />
+编程手队友没帮上什么忙，论文手前两天在摸鱼，不过第一次嘛，感觉发挥还不错，不知道能不能拿个奖<br />
+七号结束比赛，后面头两天一直陷在神经高度紧绷状态，没法休息没法睡觉，虽然比赛已经结束，而且我很累很累了<br />
+直到大概第三天才稍微缓过来，从两点安稳地睡到了十二点，后面才能好好休息，有时候感觉自己又挺脆弱的，别人大概第二天就恢复了吧，我得需要一个星期才能慢慢恢复正常<br />
+现在...继续开始背单词，画画？然后在空闲时间敲代码？要不搞个自己的网站出来如何...<br />
+迷茫...我该什么时候才能接单赚点零花 &gt;.&lt;</p></div>
         
         
     </div>
@@ -251,7 +251,7 @@ edge输入edge://flags<br />
       </footer>
     
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="../../../js/bootstrap-3.0.3.min.js"></script>
+    <script src="../../js/bootstrap-3.0.3.min.js"></script>
 
     
     <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/highlight.min.js"></script>
@@ -259,10 +259,10 @@ edge输入edge://flags<br />
     <script>hljs.initHighlightingOnLoad();</script>
     
 
-    <script>var base_url = "../../.."</script>
+    <script>var base_url = "../.."</script>
     
-    <script src="../../../js/base.js"></script>
-    <script src="../../../search/main.js"></script>
+    <script src="../../js/base.js"></script>
+    <script src="../../search/main.js"></script>
 
     <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
